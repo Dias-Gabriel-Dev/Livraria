@@ -9,7 +9,7 @@ import { autenticarToken } from "../middlewares/authMiddleware.js";
 const router = express.Router();
 
 router.post("/registrar", validarRegistroUsuario, AuthController.registrarUsuario);
-router.post("/login", validarRegistroUsuario, AuthController.loginUsuario);
+router.get("/login", AuthController.loginUsuario);
 router.put("/perfil", autenticarToken, validarAtualizacaoPerfil, async( req, res) => {
     try {
         const erros = validationResult(req);
