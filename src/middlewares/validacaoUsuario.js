@@ -1,21 +1,23 @@
 import { body } from "express-validator";
 
+// Validação para registro de novos usuários
 export const validarRegistroUsuario = [
     body("nome")
         .isString().withMessage("O nome deve ser um texto.")
-        .isLength({ min: 3, max: 50}).withMessage("O nome deve ter entre 3 a 50 caracteres"),
+        .isLength({ min: 3, max: 50 }).withMessage("O nome deve ter entre 3 a 50 caracteres"), // ✅ Correção: Removido espaço após "50"
     body("email")
         .isEmail().withMessage("O e-mail deve ser válido."),
     body("senha")
-        .isLength({ min: 6}).withMessage("A senha deve ter no mínimo 6 caracteres"),
+        .isLength({ min: 6 }).withMessage("A senha deve ter no mínimo 6 caracteres"), // ✅ Correção: Pontuação consistente
     body("cpf")
-        .isLength({ min: 11, max: 11}).withMessage(" O CPF deve ter exatamente 11 caracteres.")
+        .isLength({ min: 11, max: 11 }).withMessage("O CPF deve ter exatamente 11 caracteres.") // ✅ Correção: Removido espaço inicial
         .isNumeric().withMessage("O CPF deve conter apenas números."),
     body("role")
         .optional()
-        .isIn(["admin", "operador", "cliente"]).withMessage("O nível de acesso deve serr admin, operador ou cliente.")
+        .isIn(["admin", "operador", "cliente"]).withMessage("O nível de acesso deve ser admin, operador ou cliente.") // ✅ Correção: "serr" → "ser"
 ];
 
+// Validação para login de usuários
 export const validarLoginUsuario = [
     body("email")
         .isEmail().withMessage("O e-mail deve ser válido."),
@@ -23,25 +25,24 @@ export const validarLoginUsuario = [
         .notEmpty().withMessage("A senha é obrigatória.")
 ];
 
+// Validação para atualização do próprio perfil
 export const validarAtualizacaoPerfil = [
     body("nome")
         .optional()
-        .isString().withMessage("O nome deve se ruma string.")
-        .isLength({ min: 3, max: 50}).withMessage("O nome deve ter entre 3 e 50 caracteres."),
+        .isString().withMessage("O nome deve ser uma string.") // ✅ Correção: "se" → "ser"
+        .isLength({ min: 3, max: 50 }).withMessage("O nome deve ter entre 3 e 50 caracteres."),
     body("email")
-    .optional()
-    .isEmail().withMessage("O e-mail deve ser válido.")    
+        .optional()
+        .isEmail().withMessage("O e-mail deve ser válido.")
 ];
 
-
-const validarRegistro = [
-    body("nome")
-        .notEmpty().withMessage("O nome é obrigatório."),
-    body("email")
-        .isEmail().withMessage("O e-mail deve ser válido."),
-    body("senha")
-        .isLength({ min: 6 }).withMessage("A senha deve ter pelo menos 6 caracteres."),
-    body("cpf").notEmpty().withMessage("O CPF é obrigatório."),
+// Validação para atualização administrativa (apenas admin)
+export const validarAtualizacaoAdmin = [
+    body("nome").optional().isLength({ min: 3 }),
+    body("email").optional().isEmail(),
+    body("cpf").optional().isLength({ min: 11, max: 11 }),
+    body("role").optional().isIn(["admin", "operador", "cliente"])
 ];
 
-export default validarRegistro;
+// ❌ Removido: Validação redundante "validarRegistro" (já substituída por "validarRegistroUsuario")
+// Motivo: Duplicação de código que causava conflito de imports
