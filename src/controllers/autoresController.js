@@ -13,7 +13,7 @@ class AutorController {
   } catch (erro) {
           res.status(500).json({ message: "Erro interno no servidor" });
   }
-}
+};
 
   static listarAutorPorId = async (req, res, next) => {
     try {
@@ -75,6 +75,6 @@ class AutorController {
     }
   
 
-}
+};
 
-export default AutorController
+export default AutorController;
