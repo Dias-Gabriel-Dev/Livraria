@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const autorSchema = new mongoose.Schema(
   {
     id: {type: String},
-    nome: {type: String, required: true},
+    nome: {
+      type: String, required: [true, "O nome do(a) autor(a) é obirgatório."]},
     nacionalidade: {type: String}
   },
   {
