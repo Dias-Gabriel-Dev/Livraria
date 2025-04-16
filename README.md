@@ -1,6 +1,6 @@
 # 🚀 Livraria API - Meu Projeto de Estudo
 
-Um projeto de API RESTful de uma livraria, feito com foco em boas práticas, usando tecnologias modernas. Aqui, compartilho minhas implementações, tecnologias usadas e o progresso até agora.
+Um projeto de API RESTful de uma livraria, desenvolvido no Curso API Express com NodeJS e MongoDB da plataforma Alura com foco em boas práticas, usando tecnologias modernas. Aqui, compartilho minhas implementações, tecnologias usadas e o progresso até agora.
 
 ---
 
@@ -11,7 +11,7 @@ Um projeto de API RESTful de uma livraria, feito com foco em boas práticas, usa
 | ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white) | Backend com Node.js | Em andamento |
 | ![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white) | Framework web | Implementado |
 | ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white) | Banco de dados NoSQL | Em uso |
-| ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge) | Autenticação | Funcional |
+| ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge) | Autenticação | Implementando |
 | ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white) | Containerização | Em testes |
 
 ---
