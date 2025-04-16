@@ -1,6 +1,6 @@
 # 🚀 Livraria API - Meu Projeto de Estudo
 
-Um projeto de API RESTful de uma livraria, feito com foco em boas práticas, usando tecnologias modernas. Aqui, compartilho minhas implementações, tecnologias usadas e o progresso até agora.
+Um projeto de API RESTful de uma livraria, desenvolvido no Curso API Express com NodeJS e MongoDB da plataforma Alura com foco em boas práticas, usando tecnologias modernas. Aqui, compartilho minhas implementações, tecnologias usadas e o progresso até agora.
 
 ---
 
