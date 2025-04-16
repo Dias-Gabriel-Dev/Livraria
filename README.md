@@ -37,7 +37,6 @@ git clone https://github.com/Dias-Gabriel-Dev/Livraria.git
 cd Livraria
 npm install
 
-
 3. Configure seu arquivo `.env` com as variáveis necessárias (exemplo no `.env.example`).
 
 4. Rode a API:
